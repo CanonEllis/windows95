@@ -1,0 +1,179 @@
+/* Body styling */
+body {
+  font-family: 'Tahoma', sans-serif;
+  background-color: #008080;
+  margin: 0;
+}
+
+/* Taskbar Styling */
+#taskbar {
+  background-color: #C0C0C0;
+  height: 40px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-top: 2px solid black;
+}
+
+#start-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent; /* Remove background */
+  border: none; /* Remove border */
+  padding: 0; /* Remove padding */
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+#start-button img {
+  width: 80px;  /* Adjust size as needed */
+  height: auto;
+  margin-right: 5px; /* Optional: Adjust spacing between the image and text */
+}
+
+
+#taskbar-items {
+  flex-grow: 1;
+}
+
+/* Start Menu Styling */
+#start-menu {
+  display: none;
+  position: absolute;
+  bottom: 50px;
+  left: 10px;
+  width: 250px;
+  background-color: #C0C0C0;
+  border: 2px solid black;
+  padding: 1px;
+  z-index: 10;
+  font-family: 'Tahoma', sans-serif;
+}
+
+/* Submenu Styling */
+.submenu {
+  display: none;  /* Hidden by default */
+  position: absolute;
+  left: 250px;    /* Position the submenu to the right of the main menu */
+  top: 0;
+  width: 200px;
+  background-color: #C0C0C0;
+  border: 2px solid black;
+  z-index: 15;
+  padding: 5px 0;
+}
+
+#start-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#start-menu li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 14px;
+  color: black;
+  cursor: pointer;
+  position: relative; /* Position for the arrow */
+}
+
+#start-menu li img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;  /* Space between the icon and the text */
+}
+
+#start-menu li .arrow {
+  font-size: 12px;
+  color: black;
+  position: absolute;
+  right: 10px; /* Position the arrow on the right */
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center the arrow */
+}
+
+#start-menu li:hover {
+  background-color: #000080;
+  color: white;
+}
+
+#start-menu li:hover .arrow {
+  color: white;
+}
+
+
+#start-menu li .arrow {
+  font-size: 12px;
+  color: black;
+}
+
+#start-menu hr {
+  border: 1px solid #808080;
+  margin: 5px 0;
+}
+
+
+/* Sleep Screen Styling */
+#sleep-screen {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1000;
+  text-align: center;
+  color: white;
+}
+
+#bouncing-logo {
+  position: absolute;
+  width: 150px;
+  height: auto;
+}
+
+/* Desktop */
+#desktop {
+  padding: 20px;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Desktop Icons Container */
+#desktop-icons {
+  position: absolute;
+  top: 350px;
+  left: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;  /* Space between each icon */
+  width: 150px; /* Adjust width for more space */
+}
+
+/* Each Icon Item */
+.desktop-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.desktop-icon img {
+  width: 48px; /* Size of the icons (adjust as needed) */
+  height: 48px;
+}
+
+.desktop-icon span {
+  font-size: 12px; /* Retro font size */
+  color: white;
+  text-align: center;
+  margin-top: 5px;
+  text-shadow: 1px 1px black; /* Adds a slight shadow for retro feel */
+}

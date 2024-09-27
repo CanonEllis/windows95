@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Windows 95 Login</title>
+  <link rel="stylesheet" href="css/login-style.css">
+</head>
+<body>
+
+  <div id="login-window">
+    <div id="login-header">
+      <span>Welcome to Windows</span>
+      <div id="header-controls">
+        <span class="help">?</span>
+        <span class="close">X</span>
+      </div>
+    </div>
+
+    <div id="login-body">
+      <img src="images/key-icon.png" alt="Key Icon" id="key-icon">
+      <div id="login-fields">
+        <p>Type a user name and password to log on to Windows.</p>
+        <div class="input-row">
+          <label for="username">User name:</label>
+          <input type="text" id="username" value="">
+        </div>
+        <div class="input-row">
+          <label for="password">Password:</label>
+          <input type="password" id="password">
+        </div>
+      </div>
+    </div>
+
+    <!-- Buttons aligned to the right of the inputs -->
+    <div id="login-buttons">
+      <button id="login-btn">OK</button>
+      <button id="cancel-btn">Cancel</button>
+    </div>
+  </div>
+
+  <script src="js/login.js"></script>
+</body>
+</html>

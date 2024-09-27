@@ -1,0 +1,132 @@
+/* Body styling */
+body {
+  background-color: #008080; /* Classic Windows 95 teal background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Tahoma', sans-serif;
+}
+
+/* Login Window */
+#login-window {
+  width: 550px; /* Increased width to make it more rectangular */
+  border: 2px solid #000;
+  background-color: #C0C0C0; /* Windows 95 gray */
+  box-shadow: 4px 4px 0px #000;
+  padding-bottom: 20px; /* Add padding at the bottom */
+}
+
+/* Header styling (blue bar) */
+#login-header {
+  background-color: #000080;
+  color: white;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#login-header span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#header-controls {
+  display: flex;
+  align-items: center;
+}
+
+#header-controls .help, #header-controls .close {
+  font-size: 14px;
+  background-color: #C0C0C0;
+  border: 1px solid #808080;
+  padding: 2px 6px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for help (?) button */
+#header-controls .help:hover {
+  background-color: #0000FF; /* Blue hover color */
+  color: white;
+}
+
+/* Hover effect for close (X) button */
+#header-controls .close:hover {
+  background-color: #FF0000; /* Red hover color */
+  color: white;
+}
+
+#login-body {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  height: calc(100% - 70px); /* Adjust body height */
+}
+
+/* Icon on the left side */
+#key-icon {
+  width: 50px;
+  margin-right: 20px;
+}
+
+/* Input fields and labels */
+#login-fields {
+  width: 100%;
+}
+
+#login-fields p {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* Align the inputs and buttons in a row */
+.input-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Adjusted margin for tighter spacing */
+}
+
+#login-fields label {
+  font-size: 14px;
+  width: 120px; /* Fixed width for labels */
+}
+
+#login-fields input {
+  width: 300px; /* Adjust width for input */
+  padding: 5px;
+  border: 2px solid #808080;
+  background-color: white;
+  font-size: 14px;
+}
+
+/* Login and Cancel buttons next to the inputs */
+#login-buttons {
+  display: flex;
+  align-items: flex-start; /* Align buttons to the top */
+  justify-content: flex-end;
+  margin-top: -15px; /* Move the buttons upward */
+  padding: 0 20px;
+  margin-bottom: 20px; /* Add space between buttons and bottom */
+}
+
+#login-buttons button {
+  width: 80px;
+  margin-left: 10px;
+  background-color: #C0C0C0;
+  border: 2px solid #000;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#login-buttons button:active {
+  border: 2px inset #000;
+}
+
+#login-buttons button:hover {
+  background-color: #808080;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Windows 95 CTF</title>
+  <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Start Menu -->
+  <div id="start-menu">
+    <ul>
+      <li class="has-submenu">
+        <img src="images/icons/programs.png"> Programs
+        <span class="arrow">&#9654;</span>
+        <!-- Submenu for Programs -->
+        <ul class="submenu">
+          <li>Accessories</li>
+          <li>Games</li>
+          <li>Startup</li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <img src="images/icons/documents.png" alt="Documents Icon"> Documents
+        <span class="arrow">&#9654;</span>
+        <!-- Submenu for Documents -->
+        <ul class="submenu">
+          <li>Recent Files</li>
+          <li>Downloads</li>
+          <li>My Documents</li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <img src="images/icons/settings.png" alt="Settings Icon"> Settings
+        <span class="arrow">&#9654;</span>
+        <!-- Submenu for Settings -->
+        <ul class="submenu">
+          <li>Control Panel</li>
+          <li>Printers</li>
+          <li>Taskbar</li>
+        </ul>
+      </li>
+      <li><img src="images/icons/find.png" alt="Find Icon"> Find</li>
+      <li><img src="images/icons/help.png" alt="Help Icon"> Help</li>
+      <li><img src="images/icons/run.png" alt="Run Icon"> Run...</li>
+      <hr />
+      <li><img src="images/icons/suspend.png" alt="Suspend Icon"> Suspend</li>
+      <li><img src="images/icons/shutdown.png" alt="Shut Down Icon"> Shut Down...</li>
+    </ul>
+  </div>
+
+
+  <!-- Main Content -->
+  <div id="desktop">
+    <h1>Welcome to the Windows 95 CTF</h1>
+    <p>Interact with the challenges and solve the puzzles to win!</p>
+  </div>
+
+
+  <!-- Taskbar at the bottom -->
+  <div id="taskbar">
+    <div id="start-button" class="taskbar-item">
+      <img src="images/start-icon.png" alt="Start Icon">
+    </div>
+    <div id="taskbar-items" class="taskbar-item">
+      <!-- Taskbar open items go here -->
+    </div>
+  </div>
+  <!-- Icons on the left side -->
+  <div id="desktop-icons">
+  <div class="desktop-icon">
+    <img src="images/icons/my_computer.png" alt="My Computer">
+    <span>My Computer</span>
+  </div>
+  <div class="desktop-icon">
+    <img src="images/icons/network.png" alt="Network">
+    <span>Network</span>
+  </div>
+  <div class="desktop-icon">
+    <img src="images/icons/inbox.png" alt="Inbox">
+    <span>Inbox</span>
+  </div>
+  <div class="desktop-icon">
+    <img src="images/icons/recycle_bin.png" alt="Recycle Bin">
+    <span>Recycle Bin</span>
+  </div>
+  <div class="desktop-icon">
+    <img src="images/icons/msn.png" alt="The Microsoft Network">
+    <span>The Microsoft Network</span>
+  </div>
+  <div class="desktop-icon">
+    <img src="images/icons/briefcase.png" alt="My Briefcase">
+    <span>My Briefcase</span>
+  </div>
+</div>
+
+  <!-- Sleep Screen -->
+  <div id="sleep-screen">
+    <img id="bouncing-logo" src="images/windows95_logo.webp" alt="Windows 95 Logo">
+  </div>
+
+  <!-- Link to the external JavaScript files -->
+  <script src="js/start-menu.js"></script>
+  <script src="js/sleep-screen.js"></script>
+
+</body>
+</html>
