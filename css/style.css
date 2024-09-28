@@ -8,13 +8,14 @@ body {
 /* Taskbar Styling */
 #taskbar {
   background-color: #C0C0C0;
-  height: 40px;
+  height: 6vh; /* Relative height to viewport */
   position: fixed;
   bottom: 0;
   width: 100%;
   display: flex;
   align-items: center;
   border-top: 2px solid black;
+  z-index: 9;
 }
 
 #start-button {
@@ -25,15 +26,14 @@ body {
   padding: 0; /* Remove padding */
   font-weight: bold;
   cursor: pointer;
-  margin-left: 5px;
+  margin-left: 1vw; /* Margin relative to viewport */
 }
 
 #start-button img {
-  width: 80px;  /* Adjust size as needed */
+  width: 8vw;  /* Adjust size as needed */
   height: auto;
-  margin-right: 5px; /* Optional: Adjust spacing between the image and text */
+  margin-right: 1vw; /* Optional: Adjust spacing between the image and text */
 }
-
 
 #taskbar-items {
   flex-grow: 1;
@@ -43,12 +43,13 @@ body {
 #start-menu {
   display: none;
   position: absolute;
-  bottom: 50px;
-  left: 10px;
-  width: 250px;
+  bottom: 7vh; /* Relative to taskbar */
+  left: 2vw;
+  width: 20vw; /* Use viewport width for scaling */
+  max-width: 250px;
   background-color: #C0C0C0;
   border: 2px solid black;
-  padding: 1px;
+  padding: 0.5rem;
   z-index: 10;
   font-family: 'Tahoma', sans-serif;
 }
@@ -57,13 +58,14 @@ body {
 .submenu {
   display: none;  /* Hidden by default */
   position: absolute;
-  left: 250px;    /* Position the submenu to the right of the main menu */
+  left: 100%;    /* Position the submenu to the right of the main menu */
   top: 0;
-  width: 200px;
+  width: 15vw; /* Scale submenu with viewport */
+  max-width: 200px;
   background-color: #C0C0C0;
   border: 2px solid black;
   z-index: 15;
-  padding: 5px 0;
+  padding: 1rem 0;
 }
 
 #start-menu ul {
@@ -75,24 +77,26 @@ body {
 #start-menu li {
   display: flex;
   align-items: center;
-  padding: 10px;
-  font-size: 14px;
+  padding: 1rem;
+  font-size: 1rem; /* Scalable font size */
   color: black;
   cursor: pointer;
   position: relative; /* Position for the arrow */
 }
 
 #start-menu li img {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;  /* Space between the icon and the text */
+  width: 2.5vw; /* Scale icon size with viewport */
+  height: 2.5vw;
+  max-width: 20px; /* Ensure icons don't get too large */
+  max-height: 20px;
+  margin-right: 1vw;
 }
 
 #start-menu li .arrow {
-  font-size: 12px;
+  font-size: 0.9rem; /* Scalable font size */
   color: black;
   position: absolute;
-  right: 10px; /* Position the arrow on the right */
+  right: 1vw; /* Position the arrow relative to viewport */
   top: 50%;
   transform: translateY(-50%); /* Vertically center the arrow */
 }
@@ -106,17 +110,10 @@ body {
   color: white;
 }
 
-
-#start-menu li .arrow {
-  font-size: 12px;
-  color: black;
-}
-
 #start-menu hr {
   border: 1px solid #808080;
-  margin: 5px 0;
+  margin: 1vh 0; /* Relative margin */
 }
-
 
 /* Sleep Screen Styling */
 #sleep-screen {
@@ -134,27 +131,28 @@ body {
 
 #bouncing-logo {
   position: absolute;
-  width: 150px;
+  width: 15vw;
   height: auto;
 }
 
 /* Desktop */
 #desktop {
-  padding: 20px;
+  padding: 2vw; /* Responsive padding */
   color: white;
-  font-size: 24px;
+  font-size: 2vw; /* Scalable font size */
   text-align: center;
 }
 
 /* Desktop Icons Container */
 #desktop-icons {
   position: absolute;
-  top: 350px;
-  left: 1px;
+  top: 30vh; /* Position relative to viewport */
+  left: 1vw;
   display: flex;
   flex-direction: column;
-  gap: 20px;  /* Space between each icon */
-  width: 150px; /* Adjust width for more space */
+  gap: 2vh;  /* Space between each icon relative to viewport height */
+  width: 10vw; /* Scale container width */
+  max-width: 150px; /* Set a maximum width */
 }
 
 /* Each Icon Item */
@@ -166,14 +164,80 @@ body {
 }
 
 .desktop-icon img {
-  width: 48px; /* Size of the icons (adjust as needed) */
-  height: 48px;
+  width: 6vw; /* Scale icon size relative to viewport width */
+  height: 6vw;
+  max-width: 48px; /* Ensure icons don't grow too large */
+  max-height: 48px;
 }
 
 .desktop-icon span {
-  font-size: 12px; /* Retro font size */
+  font-size: 1rem; /* Scalable font size */
   color: white;
   text-align: center;
-  margin-top: 5px;
+  margin-top: 0.5rem; /* Scalable margin */
   text-shadow: 1px 1px black; /* Adds a slight shadow for retro feel */
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+  #start-button img {
+    width: 12vw;
+  }
+
+  #desktop-icons {
+    width: 15vw;
+  }
+
+  #desktop-icon img {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  #start-menu {
+    width: 30vw;
+    max-width: 200px;
+  }
+
+  .submenu {
+    width: 20vw;
+    max-width: 150px;
+  }
+
+  #start-menu li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #desktop-icons {
+    width: 20vw;
+    max-width: 100px;
+  }
+
+  #desktop-icon img {
+    width: 4vw;
+    height: 4vw;
+  }
+
+  #start-menu {
+    width: 40vw;
+    max-width: 180px;
+  }
+
+  .submenu {
+    width: 30vw;
+    max-width: 140px;
+  }
+
+  #start-menu li {
+    font-size: 0.8rem;
+  }
+
+  #start-button img {
+    width: 10vw;
+  }
+
+  #desktop {
+    font-size: 1.5vw;
+  }
 }
